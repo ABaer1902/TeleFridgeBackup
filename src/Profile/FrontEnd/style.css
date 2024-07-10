@@ -1,0 +1,633 @@
+.message, h1{
+    padding: 0;
+    margin:0;
+    font-family: 'Luckiest Guy';
+    font-size: 50px;
+    font-weight: 100;
+    text-overflow: clip;
+    color: #000000;
+}
+
+.username_font{
+    font-weight: bold;
+    font-family: "Montserrat";
+}
+
+a, p, h2, input, label, .btn-close-popup, .btn-submit, .btn-close-popupN, .btn-submitN {
+    font-family: 'Luckiest Guy';
+    font-size: 40px;
+    font-weight: 20;
+}
+
+input {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Montserrat";
+}
+
+#backButton{
+    margin-top: 80px;
+    margin-left: 30px;
+    width: 50px;
+    height: 50px;
+    background: hsl(0, 0%, 0%, 0);
+    border-width: 0;
+    filter: drop-shadow(0px 0px 2px #2b2b2b);
+}
+
+#recipes{
+    grid-area: "recipes"
+
+}
+
+#info {
+    grid-area: "info";
+    display: grid;
+    grid-template-areas: 'profile-pic username username username follow';
+    height: 20%;
+    margin-bottom: 5%;
+    
+}
+
+    #nameContainer{
+        grid-area: 'username';
+        align-content: center;
+        justify-content: center;
+
+    }
+        #username{
+            margin-left: 0%;
+            background-color: transparent;
+            border: none;
+        }
+        #username:hover{
+            cursor: pointer;
+            filter: drop-shadow(0px 1px 7px #1f1f1f);
+        }
+    #picContainer{
+        grid-area: 'profile-pic';
+        align-content: center;
+        margin-left: 20%;
+    }
+        #picbtn{
+            background-color: transparent;
+            border-radius: 100%;
+            border: none;
+        }
+
+        #picbtn:hover{
+            cursor: pointer;
+            filter: drop-shadow(0px 1px 7px #1f1f1f);
+        }
+        #pic{
+            height: 150px;
+            width: 150px;
+            text-align: center;
+            border-radius: 100%;
+        }
+
+    #followers {
+        grid-area: 'follow';
+        align-content: center;
+    }
+
+        #follow-button {
+            width: 120px;
+            height: 50px;
+            background-color: #1f66ff;
+            border: none;
+            border-radius: 25px;
+          }
+          
+          #follow-button:hover{
+            cursor: pointer;
+            background-color: #80a8ff;
+          }
+          
+          #fpic {
+            background-color: transparent;
+            width: 45px;
+            height: 45px;
+          }
+                
+
+
+#recipeTitle{
+    grid-area: 'recipe-title';
+    height: 10%;
+    margin-left: 10%;
+}
+
+#recipes{
+    padding: 1%;
+    background-color: darkgrey;
+    border-radius: 25px;
+    height:auto;
+}
+
+
+.singleRecipe{
+    display: grid;
+    grid-template-areas: 'recipe-pic recipe-name recipe-name recipe-name recipe-name edit-picture difficulty difficulty difficulty calories likes dislikes';
+    height: auto;
+    align-items: center;
+    background-color: lightgrey;
+    border-radius: 25px;
+    margin: 1%;
+
+
+
+}
+
+#recipePicContainer {
+    grid-area: recipe-pic;
+    padding-left: 10%;
+}
+
+#recipePic{
+    padding: 10px;
+    height: 120px;
+    width: 120px;
+    border-radius: 25px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+#editPicture {
+    grid-area: edit-picture;
+}
+
+#recipeName {
+    grid-area: recipe-name;
+}
+
+#recipeInfo{
+    background-color: transparent;
+    border-radius: 100%;
+    border: none;
+}
+#recipeInfo:hover{
+    cursor: pointer;
+    filter: drop-shadow(0px 1px 7px #1f1f1f);
+}
+
+#difficulty{
+    grid-area: difficulty;
+    align-content: flex-end;
+}
+
+#calories{
+    grid-area: calories; 
+    align-content: flex-end;
+}
+
+#likes{
+    grid-area: likes; 
+    text-align: center;
+}
+
+#dislikes{
+    grid-area: dislikes;
+    text-align: center;
+        
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+#pageContents{
+    width: 96%;
+    height: 96%;
+    margin:2%;
+
+}
+    #logoutContainer{
+        grid-area: "logout";
+        align-self: end;
+        position: relative;
+        width: 80px;
+        height: 90px;
+        margin-top: 5%;
+    }
+    #logoutIcon{
+        height: 50px;
+        margin: 0;
+        padding:0;
+    }
+    #logoutContainer:hover{
+        cursor: pointer;
+        filter: drop-shadow(0px 1px 7px #1f1f1f);
+    }
+    #logoutMessage{
+        font-size: 20px;
+    }
+
+    /*popup*/
+
+
+.overlay-container { 
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.6); 
+    justify-content: center; 
+    align-items: center; 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+} 
+
+.popup-box { 
+    background: #fff; 
+    padding: 24px; 
+    border-radius: 12px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); 
+    width: 320px; 
+    text-align: center; 
+    opacity: 0; 
+    transform: scale(0.8); 
+    animation: fadeInUp 0.5s ease-out forwards; 
+    z-index: 99 !important;
+} 
+
+.form-container{ 
+    display: flex; 
+    flex-direction: column; 
+} 
+
+
+.overlay-containerN { 
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.6); 
+    justify-content: center; 
+    align-items: center; 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+} 
+
+.popup-boxN { 
+    background: #fff; 
+    padding: 24px; 
+    border-radius: 12px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); 
+    width: 320px; 
+    text-align: center; 
+    opacity: 0; 
+    transform: scale(0.8); 
+    animation: fadeInUp 0.5s ease-out forwards; 
+    z-index: 99 !important;
+} 
+
+
+.overlay-containerF { 
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.6); 
+    justify-content: center; 
+    align-items: center; 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+} 
+
+.popup-boxF { 
+    background: #fff; 
+    padding: 24px; 
+    border-radius: 12px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); 
+    width: 320px; 
+    text-align: center; 
+    opacity: 0; 
+    transform: scale(0.8); 
+    animation: fadeInUp 0.5s ease-out forwards; 
+    z-index: 99 !important;
+} 
+
+
+
+.overlay-containerFL { 
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.6); 
+    justify-content: center; 
+    align-items: center; 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+} 
+
+.popup-boxFL { 
+    background: #fff; 
+    padding: 24px; 
+    border-radius: 12px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); 
+    width: 320px; 
+    text-align: center; 
+    opacity: 0; 
+    transform: scale(0.8); 
+    animation: fadeInUp 0.5s ease-out forwards; 
+    z-index: 99 !important;
+} 
+
+
+
+.form-containerN { 
+    display: flex; 
+    flex-direction: column; 
+} 
+
+
+.form-label, .form-labelN { 
+    margin-bottom: 10px; 
+    font-size: 16px; 
+    color: #444; 
+    text-align: center; 
+
+} 
+
+.form-input, .form-inputN { 
+    text-align: center;
+    padding: 10px; 
+    margin-bottom: 20px; 
+    border: 3px solid #1f1f1f; 
+    border-radius: 8px; 
+    font-size: 16px; 
+    width: 100%; 
+    box-sizing: border-box; 
+} 
+
+
+
+.btn-submit, 
+.btn-close-popup, .btn-submitN, .btn-submitF, .btn-close-popupN, .btn-close-popupF { 
+    padding: 12px 24px; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    font-size: 30px;
+} 
+
+.btn-submit, .btn-submitN, .btn-submitF { 
+    background-color: green; 
+    color: #fff; 
+} 
+
+.btn-close-popup, .btn-close-popupN, .btn-close-popupF { 
+    margin-top: 12px; 
+    background-color: #e74c3c; 
+    color: #fff; 
+} 
+
+.btn-submit:hover, .btn-submitN:hover, .btn-submitF:hover{ 
+    background-color: #4caf50; 
+} 
+
+.btn-close-popup:hover, .btn-close-popupN:hover, .btn-close-popupF:hover{
+    background-color: #f08175;
+}
+
+
+/* Keyframes for fadeInUp animation */ 
+@keyframes fadeInUp { 
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    } 
+
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
+} 
+
+/* Animation for popup */ 
+.overlay-container.show { 
+    display: flex; 
+    opacity: 1; 
+} 
+
+/* Animation for popup */ 
+.overlay-containerN.show { 
+    display: flex; 
+    opacity: 1; 
+} 
+
+/* Animation for popup */ 
+.overlay-containerF.show { 
+    display: flex; 
+    opacity: 1; 
+} 
+
+.overlay-containerFL.show { 
+    display: flex; 
+    opacity: 1; 
+} 
+
+#show-follow {
+    background-color: transparent;
+    border: none;
+}
+
+#show-follow:hover{
+    cursor: pointer;
+    filter: drop-shadow(0px 1px 7px #1f1f1f);
+}
+
+#show-following {
+    background-color: transparent;
+    border: none;
+}
+
+#show-following:hover{
+    cursor: pointer;
+    filter: drop-shadow(0px 1px 7px #1f1f1f);
+}
+#follow-list {
+    overflow: scroll;
+    width: auto;
+    overflow-x: hidden;
+    height: 400px;
+    display: grid;
+}
+
+#following-list {
+    overflow: scroll;
+    width: auto;
+    overflow-x: hidden;
+    height: 400px;
+    display: grid;
+}
+
+#flpic {
+    width: 50px;
+    height: 50px;
+}
+
+#flname {
+    font-size: 30px;
+}
+
+#display-follow {
+    font-size: 20px;
+}
+
+#display-following {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    #pageContents{
+        display: inline-block;
+        grid-template-rows: auto 10% auto auto;
+        grid-template-areas: 'info' 'recipe-title' 'recipes' 'logout';
+ 
+    }
+
+    #page {
+        overflow:scroll;
+    }
+  
+    #editPicture {
+        padding-left: 0%;
+        text-align: center;
+        grid-area: edit-picture;
+    }
+
+    .dots-picture {
+        padding-left: 0%;
+        text-align: center;
+    }
+
+  
+    #info {
+        grid-template-areas: 'profile-pic' 'username' 'follow';
+        justify-content: center;
+    }
+    
+    #followers {
+        text-align: center;
+    }
+    #recipeTitle{
+        margin-left: 0%;
+        text-align: center;
+    }
+
+    #nameContainer{
+        text-align: center;
+    }
+
+    #picContainer{
+        margin-left: 0%;
+    }
+
+    #pic {
+        margin-left: 0%;
+        height: 250px;
+        width: 250px;
+    }
+
+    
+    #calories{
+        grid-area: calories; 
+        /*align-content: center;*/
+        text-align: center;
+    }
+    
+
+
+    .singleRecipe {
+        grid-template-areas: 
+            'recipe-pic recipe-pic' 
+            'recipe-name recipe-name'
+            'edit-picture edit-picture'
+            'difficulty difficulty'
+            'calories calories'
+            'likes dislikes';
+        margin: 3%;
+        
+    }
+
+    #recipePicContainer{
+        padding-left: 0%;
+        text-align: center;
+    }
+
+    #recipeName{
+        text-align: center;
+    }
+
+    #difficulty{
+        text-align: center;
+    }
+
+    .icon {
+        width: 60px;
+        height: 60px;
+    }
+        
+    #logoutContainer{
+        bottom: 10%;
+        margin-top: 80px;
+        position: relative;
+    }
+
+    #info{
+        height: unset;
+    }
+
+    #bioContainer{
+        height: unset;
+        margin-top: 10px;
+    }
+
+}
+
+#profileInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+#bioTextarea {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 16px; 
+    color: #000;
+    background-color: lightgrey;
+    border: none; 
+    resize: none; 
+    width: 80%;
+    height: 150px;
+    padding: 10px;
+    margin-top: 10px; 
+    padding-bottom: 30px;
+    border-radius: 12px;
+}
+.smallImage{
+    height: 50px;
+}
+
+button {
+    background-color: transparent; /* Remove button background */
+    border: none; /* Remove button border */
+    cursor: pointer;
+}
+
+#bioContainer {
+    padding: 20px; /* Add padding to all sides */
+    margin-bottom: 20px; /* Adjust margin as needed */
+}

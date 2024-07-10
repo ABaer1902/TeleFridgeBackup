@@ -1,0 +1,437 @@
+h1{
+  font-family: 'Luckiest Guy', cursive;
+  font-weight: bold;
+  color: #000000;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 53px;
+  filter: drop-shadow(0px 0px 3px #d2d2d2);
+        
+}
+
+body{
+  width: 100%;
+}
+
+.pic{
+  margin-top: 50px;
+  margin-bottom: 50;
+  height: 500px;
+  width: 500px;
+  overflow: hidden;
+  border-radius: 35px;
+  object-fit: cover;
+}
+.header {
+  padding-left: 10%;
+  padding-right: 10%;
+  align-items: center;
+  display: grid;
+}
+
+.left-header {
+  /* text-align: left; */
+  width: 100%;
+  display:inline-flex;
+  text-align: center;
+}
+    #back-button{
+      width:25%;
+    }
+    #recipeName{
+      width: 50%;
+    }
+    #profile-data{
+      width:25%;
+      text-align: center;
+    }
+
+.right-header {
+  display: grid;
+  width: 100%;
+  /* justify-content: flex-end;  Align entire grouping to the right */
+  font-size: 53px;
+  float: right;
+  margin-left: auto;
+  align-items: flex-end;
+}
+
+#back-button{
+  border: none;
+  /* padding-top: 0px; */
+}
+
+
+
+.username {
+  margin-left: 10px; /* add some space between the image and text */
+  font-size: 31px;
+}
+
+.profile-data {
+  flex-direction: row;
+}
+
+#likeButton {
+  padding-top: 10px;
+  /*padding-left: 5%; */
+}
+
+#dislikeButton {
+  padding-top: 10px;
+  /*padding-left: 5%; */
+}
+
+.centered-box {
+  display: flex;
+  width: 80%; /* Now it takes up 80% of the screen width */
+  background-color: #c4c1c1; /* Light gray color */
+  border-radius: 20px; /* Rounded corners */
+  /*padding: 20px; /* Add padding inside the box */
+  text-align: left;
+  margin: auto; /* Center horizontally */
+  font-size: 53px; 
+  font-family: Pavanam;
+  padding: 60px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.inner-right-header {
+  display: flex;
+  flex-direction: column; /* Arrange rows vertically */
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center rows against each other */
+  margin-bottom: 10px; /* Add some space between rows */
+}
+
+
+
+#like-count, #dislike-count, #like-button, #dislike-button, #like-picture, #dislike-picture {
+  cursor: pointer;
+  width: 75px;
+  text-align: center;
+  vertical-align: middle;
+  margin:10px;
+}
+
+#star-1, #star-2, #star-3, #star-4, #star-5  {
+  height: 75px;
+  width: 75px;
+  margin:10px;
+}
+
+#difficultyBar{
+  display: inline-flex;
+}
+
+#dislike-count{
+  text-align: left;
+}
+
+#like-count{
+  text-align: right;
+}
+
+.content-message{
+  font-family: 'Luckiest Guy';
+  font-size:40px;
+  overflow: visible;
+  text-decoration: none;
+  margin:0px;
+  word-wrap: break-word;
+  width: 80%;
+}
+
+.message{
+  font-family: 'Luckiest Guy';
+  font-size:40px;
+  overflow: visible;
+  text-decoration: none;
+  margin:0px;
+}
+
+.comment_bar{
+  background-color: #E2E2E2;
+  font-family: 'Luckiest Guy';
+  font-size: 25px;
+  border-radius: 25px;
+  border-width: 0;
+  height: 50px;
+  background-color: darkgray;
+  width: 600px;
+}
+
+.comment_button {
+  background-color: #E2E2E2;
+  font-family: 'Luckiest Guy';
+  font-size: 25px;
+  border-radius: 5px;
+  border-width: 2;
+  height: 50px;
+  background-color: darkgray;
+}
+
+.comment_button:hover {
+  background-color: #999999; /* Hover color (darker shade) */
+}
+
+.profileFont {
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+
+#profileLink{
+  font-weight: bold;
+  font-family: "Montserrat";
+  font-size: 30px;
+  color: black;
+  filter: drop-shadow(0px 0px 3px #d2d2d2);
+}
+#profileLink:hover{
+  filter: drop-shadow(0px 0px 5px #f2f2f2);
+}
+
+/* Redefine style for mobile */
+@media screen and (max-width: 1150px) {
+
+  h1{
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: bold;
+    color: #000000;
+    padding-top: 10px;
+    font-size: 30px; 
+  }
+
+  .header {
+    width: 100%;
+    padding: 0;
+    margin:0;
+    padding-right: 0;
+    align-items: flex-start;
+    flex-direction: column;
+    display: inline-flex;
+  }
+
+
+  .right-header, .left-header{
+    font-size: 25px;
+    font-family: Pavanam;
+  }
+
+  .inner-right-header{
+    width: 100%;
+  }
+
+  .row {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center; /* Center rows against each other */
+    margin-bottom: 1px; /* Add some space between rows */
+  }
+
+  #like-button, #dislike-button, #star-1, #star-2, #star-3, #star-4, #star-5, #back-button  {
+    /* cursor: pointer; */
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+  }
+
+  #like-picture, #dislike-picture {
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+  }
+
+  .content-message{
+    font-size: 20px;
+    word-wrap: break-word;
+    width: 90%;
+  }
+
+  .message{
+    font-size: 20px;
+  }
+  #profileLink{
+    font-size: 20px;
+  }
+
+  #dislike-count, #like-count{
+    vertical-align: middle;
+  }
+
+  .pic{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 100px;
+    width: 100px;
+    /*
+    overflow: hidden;
+    border-radius: 35px;
+    object-fit: cover;
+    */
+  }
+
+
+  .username {
+    margin-left: 2px; /* add some space between the image and text */
+    font-size: 20px;
+    font-family: Pavanam;
+  }
+
+  .centered-box {
+    display: flex;
+    width: 90%; 
+    background-color: #c4c1c1; /* Light gray color */
+    border-radius: 20px; /* Rounded corners */
+    /*padding: 20px; /* Add padding inside the box */
+    text-align: left;
+    /* margin: auto;  /* Center horizontally */
+    font-size: 25px; 
+    font-family: Pavanam;
+    margin: 0; 
+    padding: 10px;
+    
+  }
+
+  #difficultyMsg{
+    display: none;
+  }
+
+  .comment_bar{
+    width: 240px;
+    font-size: 18px;
+  }
+
+  .comment_button {
+    font-size: 18px;
+    border-radius: 5px;
+    border-width: 2;
+    height: 50px;
+  }
+
+}
+
+button {
+  background-color: #fff;
+  border: none;
+  padding: none;
+}
+
+
+
+
+/*popup*/
+
+.overlay-container { 
+  display: none; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  background: rgba(0, 0, 0, 0.6); 
+  justify-content: center; 
+  align-items: center; 
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
+} 
+
+.popup-box { 
+    background: #fff; 
+    padding: 24px; 
+    border-radius: 12px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); 
+    width: 320px; 
+    text-align: center; 
+    opacity: 0; 
+    transform: scale(0.8); 
+    animation: fadeInUp 0.5s ease-out forwards; 
+    z-index: 99 !important;
+} 
+
+.form-container{ 
+    display: flex; 
+    flex-direction: column; 
+} 
+
+
+
+
+
+.form-label { 
+    margin-bottom: 10px; 
+    font-size: 16px; 
+    color: #444; 
+    text-align: center; 
+
+} 
+
+.form-input { 
+    text-align: center;
+    padding: 10px; 
+    margin-bottom: 20px; 
+    border: 3px solid #1f1f1f; 
+    border-radius: 8px; 
+    font-size: 16px; 
+    width: 100%; 
+    box-sizing: border-box; 
+} 
+
+
+
+.btn-submit, 
+.btn-close-popup{ 
+    padding: 12px 24px; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    font-size: 30px;
+} 
+
+.btn-submit{ 
+    background-color: green; 
+    color: #fff; 
+} 
+
+.btn-close-popup { 
+    margin-top: 12px; 
+    background-color: #e74c3c; 
+    color: #fff; 
+} 
+
+.btn-submit:hover { 
+    background-color: #4caf50; 
+} 
+
+.btn-close-popup:hover { 
+  background-color: #f08175; 
+} 
+
+
+/* Keyframes for fadeInUp animation */ 
+@keyframes fadeInUp { 
+  from { 
+      opacity: 0; 
+      transform: translateY(20px); 
+  } 
+
+  to { 
+      opacity: 1; 
+      transform: translateY(0); 
+  } 
+} 
+
+/* Animation for popup */ 
+.overlay-container.show { 
+  display: flex; 
+  opacity: 1; 
+} 

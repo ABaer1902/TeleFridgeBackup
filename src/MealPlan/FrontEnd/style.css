@@ -1,0 +1,119 @@
+.message{
+    padding: 0;
+    margin:0;
+    font-family: 'Luckiest Guy';
+    font-size: 40px;
+    font-weight: 100;
+
+    text-overflow: clip;
+    color: #000000;
+
+}
+
+#titleContainer{
+    display: inline-flex;
+}
+    #title{
+        font-size: 50px;
+        margin-left: 40px;
+        margin-top: 25px;
+    }
+    #backButton{
+        margin-top: 25px;
+        margin-left: 30px;
+        width: 50px;
+        height: 50px;
+        background: hsl(0, 0%, 0%, 0);
+        border-width: 0;
+        filter: drop-shadow(0px 0px 2px #2b2b2b);
+    }
+
+#pageContents{
+    display: inline-flex;
+    margin-top:30px;
+    margin-right:30px;
+    margin-left:30px;
+    height: 83%;
+    width: 95%;
+    background-color: #FFC267;
+    border-radius: 10px;
+    overflow: auto;
+    padding: 10px;
+}
+
+
+#schedule{
+    display: grid;
+    width: 100%;
+}
+    .row{
+        width: 100%;
+        display: inline-flex;
+        background-color: #FFA927;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 10px;
+    }
+        .label{
+            width: 20%;
+            vertical-align: middle;
+            font-family: 'Luckiest Guy';
+            font-size: 25px;
+            font-weight: 1px;
+            white-space: nowrap;
+        }
+        .content{
+            width: 80%;
+            display: inline-flex;
+            overflow-y: visible;
+            overflow-x: auto;
+        }
+            .recipe{
+                height: 100px;
+                margin-top: 10px;
+                margin-right: 10px;
+                display: inline-flex;
+                padding: 10px;
+                background-color: #d2d2d2;
+                border-width: 5px;
+                border-color: #000000;
+                border-style: solid;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+
+                #pic{
+                    height: 70px;
+                    width: 70px;
+                    margin-right: 5px;
+                    border-radius: 25px;
+                    overflow: hidden;
+                    object-fit: cover;
+                }
+                .details{
+                    display: inline-flex;
+                    font-family: 'Luckiest Guy';
+                    font-size: 15px;
+                    font-weight: 1px;
+                    white-space: nowrap;
+                    padding-top: 15px;
+                }
+                    #time{
+                        padding-top: 10px;
+                        margin-left: 5px;
+                    }
+
+                #rmv:hover{
+                    cursor: pointer;
+                    filter: drop-shadow(0px 1px 7px #1f1f1f);
+                }
+
+@media screen and (max-width: 1000px) {
+    
+}

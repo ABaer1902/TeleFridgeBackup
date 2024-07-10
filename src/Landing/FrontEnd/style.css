@@ -1,0 +1,168 @@
+body {
+    background-color:#FFCD6B;
+}
+
+h1{
+    font-family: 'Luckiest Guy';
+    font-size: 100px;
+    font-weight: lighter;
+    color: #F3A000;
+    margin:0px;
+}
+
+
+
+.message{
+    font-family: 'Luckiest Guy';
+    font-weight: 10px;
+    font-size:45px;
+    color: #FFFFFF;
+    white-space: nowrap;
+    overflow: visible;
+    z-index: 1;
+    margin:0px;
+}
+
+#slogan1{
+    padding-left: 0px;
+    width: auto;
+    text-align: left;
+}
+#slogan2{
+    padding-left: 0px;
+    width: auto;
+    margin-bottom: 30%;
+    text-align: left;
+}
+
+
+#parent {
+    display: flex;
+    width:100%;
+    height: 100%;
+}
+    #right{
+        flex:1;
+        vertical-align: top;
+        width:50%;
+        height: 95%;
+        text-align: center;
+    }
+        #imageContainer{
+            width:100%;
+            text-align: center;
+            margin-right: 20%;
+            margin-top: 15%;
+            height: 100%;
+        }
+            #image{
+                height: 560px;
+                mask-repeat: no-repeat;
+                z-index: 2;
+            }
+
+
+
+.button{
+    margin-top: 20px;
+    height: 55px;
+    filter: drop-shadow(0px 0px 2px #2b2b2b);
+}
+.button:hover{
+    cursor: pointer;
+    filter: drop-shadow(0px 1px 7px #1f1f1f);
+}
+
+
+    #left {
+        flex: 1;
+        width:50%;
+        height: 95%;
+    }
+    #leftContainer {
+        flex: 1;
+        width: 80%;
+        margin-left: 20%;
+        margin-top: 15%;
+        vertical-align: top;
+        border-radius: 8px;
+        height: 500px;
+        text-align: center;
+    }
+    
+        #messageContainer{
+            flex: 2;
+            font-size:20px;
+            font-family: 'Luckiest Guy';
+            font-weight: 10px;
+            color: #FFFFFF;
+            text-align: left;
+            width: auto;
+            margin-bottom: 40px;
+        }
+
+        .titleContainter{
+            width: auto;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+            #title{
+                font-size: 80px;
+                white-space: nowrap;
+                overflow: visible;
+                text-overflow: ellipsis; 
+                filter: drop-shadow(0px 0px 5px #000000);
+            }
+
+        #exploreContainer{
+            text-align: left;
+        }
+        #loginContainer{
+            text-align: left;
+        }
+        
+p{
+    margin:0px;
+    /*-webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;*/
+    filter: drop-shadow(0px 0px 3px #1f1f1f);
+}
+
+@media screen and (max-width: 1150px) {
+    #parent, #left, #right {
+      flex-direction:column;
+    }
+
+    #title, #slogan2, #slogan1{
+        text-align: center;
+    }
+
+    #left{
+        width: 90%;
+        margin-left: 5%;
+        text-align: center;
+      }
+    #right{
+        display: none;
+    }
+
+    #leftContainer{
+        height:1000px;
+        background-image: url("./imgs/2ChefsTalking.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        text-align: center;
+        margin-left: 10%;
+    }
+    
+    #slogan2{
+        padding-bottom: 350px;
+    }
+    #exploreContainer{
+        text-align: center;
+    }
+    #loginContainer{
+        text-align: center;
+    }
+
+  }
